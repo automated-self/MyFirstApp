@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "863670549028",
+    "firebase_url": "https://automatedself-b2bdf.firebaseio.com",
+    "project_id": "automatedself-b2bdf",
+    "storage_bucket": "automatedself-b2bdf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:863670549028:android:f363407d1d70e5c1",
+        "android_client_info": {
+          "package_name": "com.example.myfirstapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "863670549028-6caciqddnhd0c6qu9098lgqpekgh64jr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADnCuRBeuOPEIwXzS7n3HfShINJE2hK9s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "863670549028-6caciqddnhd0c6qu9098lgqpekgh64jr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
