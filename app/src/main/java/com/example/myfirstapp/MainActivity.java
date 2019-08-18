@@ -3,6 +3,7 @@ package com.example.myfirstapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -25,6 +26,11 @@ public class MainActivity extends AppCompatActivity {
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
         repo = new Repo();
 
+        // todo: put this in a thread you dummy!
+        // bypass the networkOnMainThreadException
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View view) {
@@ -40,10 +46,11 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 List<OSActivity> results;
                 try {
-                    results = repo.getActivityList().execute().body().getResults();
+                    results = repo.getActivityList().execute().body();
                     Log.d("MainActivity", "Success!");
                     for (int i = 0; i < results.size(); i++) {
-                        Log.d()
+                        OSActivity result = results.get(i);
+                        Log.d("MainActivity", result.getName());
                     }
                     Log.d("MainActivity", repo.getActivityList().execute().body().toString());
 
